@@ -1,0 +1,38 @@
+// console.log(screenWidth);
+let screenWidth = window.screen.width
+
+function mobileStyle() {
+  if (screenWidth >= 900) {
+    var changingClassesInNavigation = document.getElementById("nav");
+    changingClassesInNavigation.classList.toggle("burger-none");
+  } else {
+    var changingClasses = document.getElementById("screenWidth");
+    changingClasses.classList.toggle("nav-none");
+  }
+}
+mobileStyle();
+
+
+
+
+  function burger() {
+    let body = document.getElementsByTagName( 'body' )[0];
+    let html = document.getElementsByTagName( 'html' )[0]
+    body.classList.toggle('lock');
+    html.classList.toggle('lock');
+  }
+
+function backgroundСhange(min, max) {
+      max = 48;
+      min = 0;
+      let randomR = Math.floor(Math.random() * (max - min + 1)) + min;
+      let randomG = Math.floor(Math.random() * (max - min + 1)) + min;
+      let randomB = Math.floor(Math.random() * (max - min + 1)) + min;
+
+      let randomD = Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+  document.getElementById('overlay').style.background = "rgba(" + randomR + "," + randomG + "," + randomB + ",.5) ";
+  // document.getElementById('overlay').style.background = "linear-gradient(" + randomD +"deg)";
+
+}
